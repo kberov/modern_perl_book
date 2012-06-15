@@ -69,7 +69,7 @@ X<контекст; празен>
 X<контекст; скаларен>
 X<скаларен контекст>
 
-Като присвоите върнатия от функцията резултат на скаларна (единична) променлива (L<scalars>), вие я 
+Като присвоявате върнатия от функцията резултат на скаларна (единична) променлива (L<scalars>), вие я 
 изпълнявате в I<скаларен контекст>:
 
 =begin programlisting
@@ -81,8 +81,8 @@ X<скаларен контекст>
 X<list context>
 X<context; list>
 
-Assigning the results of calling the function to an array (L<arrays>) or a
-list, or using it in a list, evaluates the function in I<list context>:
+Като присвоявате върнатия от функцията резултат на масив (L<arrays>), вие я изпълнявате 
+в I<списъчен контекст>:
 
 =begin programlisting
 
@@ -92,9 +92,9 @@ list, or using it in a list, evaluates the function in I<list context>:
 
 =end programlisting
 
-The parentheses in the second line of the previous example group the two
-variable declarations (L<lexical_scope>) so that assignment will behave as you
-expect. If C<@rest> were to go unused, you could also correctly write:
+Кръглите скоби на втория ред от предния пример групират две декларции (L<lexical_scope>)
+на променливи по такъв начин че присвояването ще се държи както очаквате. Ако C<@rest> 
+няма да се използва, щеше да е правилно и ако напишете:
 
 =begin programlisting
 
@@ -102,10 +102,10 @@ expect. If C<@rest> were to go unused, you could also correctly write:
 
 =end programlisting
 
-.... in which case the parentheses give a hint to the Perl 5 parser that you
-intend list context for the assignment even though you assign only one element
-of a list. This is subtle, but now that you know about it, the difference of
-amount context between these two statements should be obvious:
+В този случай подказвате на Perl-парсъра, че искате списъчен контекст,
+като ползвате (присвоявате на променлива) само една стойност от върнатия списък.
+Разликата с по-предния пример е едва доловима, но след като сте вече наясно 
+с количествения контекст, би трябвало да е очевидна за вас.
 
 =begin programlisting
 
