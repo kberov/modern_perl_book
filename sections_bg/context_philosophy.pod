@@ -146,10 +146,11 @@ X<builtins; C<scalar>>
 
 =end programlisting
 
-Why does context matter? A context-aware function can examine its calling
-context and decide how much work it must do. In void context, C<find_chores()>
-may legitimately do nothing. In scalar context, it can find only the most
-important task. In list context, it must sort and return the entire list.
+Защо контекстът е от значение? Функция, която прави различни неща в зависимост от
+контекста, може да провери в какъв контекст е извикана и да разбере какво има да
+прави. В скаларен контекст може да намери само най-важната задача. В празен
+контекст C<find_chores()> спокойно може да не прави нищо. В списъчен контекст
+трябва да сортира и върне целия списък със задачи.
 
 =head2 Numeric, String, and Boolean Context
 
