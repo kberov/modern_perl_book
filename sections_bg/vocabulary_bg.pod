@@ -16,6 +16,10 @@ or phrases upon which somebody suggested and others silently agreed to follow or
 
 Празен, скаларен и списъчен контекст
 
+=item Numeric, String, and Boolean Context
+
+Числов, Низов и Булев Контекст
+
 =item  x
 
 translation with or without description
