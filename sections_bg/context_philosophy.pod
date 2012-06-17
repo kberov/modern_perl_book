@@ -78,8 +78,8 @@ X<скаларен контекст>
 
 =end programlisting
 
-X<list context>
-X<context; list>
+X<списъчен контекст>
+X<контекст; списък>
 
 Като присвоявате върнатия от функцията резултат на масив (L<arrays>), вие я изпълнявате 
 в I<списъчен контекст>:
@@ -114,9 +114,9 @@ X<context; list>
 
 =end programlisting
 
-Evaluating a function or expression--except for assignment--in list context can
-produce confusion. Lists propagate list context to the expressions they
-contain. Both of these calls to C<find_chores()> occur in list context:
+Изпълнението на функция в списъчен контекст без видимо присвояване може да
+ви обърка. Списъците предават контекста си на изразите, които съдържат.
+И двете извиквания на C<find_chores()> в следващия пример са в списъчен контекст.
 
 =begin programlisting
 
@@ -125,16 +125,16 @@ contain. Both of these calls to C<find_chores()> occur in list context:
     my %results =
     (
         cheap_operation     => $cheap_results,
-        expensive_operation => find_chores(), # OOPS!
+        expensive_operation => find_chores(), # ОПАА!
     );
 
 =end programlisting
 
 X<builtins; C<scalar>>
 
-The latter example often surprises novice programmers, as initializing a hash
-(L<hashes>) with a list of values imposes list context on C<find_chores>. Use
-the C<scalar> operator to impose scalar context:
+Последният пример често изненадва начинаещи програмисти. Инициализацията на хеш
+(L<hashes>) със списък от стойности създава списъчен контекст за C<find_chores>.
+Използвайте оператора C<scalar>, за да извикате функциаята в скаларен контекст.
 
 =begin programlisting
 
