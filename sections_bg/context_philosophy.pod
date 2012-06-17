@@ -152,19 +152,21 @@ X<builtins; C<scalar>>
 контекст C<find_chores()> спокойно може да не прави нищо. В списъчен контекст
 трябва да сортира и върне целия списък със задачи.
 
-=head2 Numeric, String, and Boolean Context
+=head2 Числов, Низов и Булев Контекст
 
 Z<value_contexts>
 
-X<value context>
-X<context; value>
+X<стойностен контекст>
+X<контекст; стойност>
+X<типов контекст>
+X<тип>
 
-Perl's other context--I<value context>--governs how Perl interprets a piece of
-data.  You've probably already noticed that Perl's flexible about figuring out
-if you have a number or a string and converting between the two as you want
-them. In exchange for not having to declare (or at least track) explicitly what
-I<type> of data a variable contains or a function produces, Perl's type
-contexts provide hints that tell the compiler how to treat data.
+Другият контекст в Perl -- I<стойностен контекст> -- управлява начина, по който
+Perl обработва едно парче данни. Сигурно вече сте забелязали, колко е гъвкав
+Perl и как успява да разбере дали работите с число или низ и да превръща
+стойността от един тип в друг в зависимост от това как ползвате данните.
+В замяна на това, че не трябва да декларирате (или поне да следите) I<типа> на
+данните, които съдържа една променлива или връща дадена функция, типовите контексти в Perl предоставят подсказки, които казват на компилатора как да третира данните.
 
 X<builtins; C<eq>>
 
