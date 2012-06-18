@@ -1,6 +1,6 @@
 =encoding utf8
 
-=head1 Coercion
+=head1 Третиране на данните
 
 Z<coercion>
 
