@@ -52,15 +52,16 @@ X<лява асоциативност>
 X<асоциативност; дясна>
 X<дясна асоциативност>
 
-The I<associativity> of an operator governs whether it evaluates from left to
-right or right to left. Addition is left associative, such that C<2 + 3 + 4>
-evaluates C<2 + 3> first, then adds C<4> to the result. Exponentiation is right
-associative, such that C<2 ** 3 ** 4> evaluates C<3 ** 4> first, then raises
-C<2> to the 81st power.
+I<Асоциативността> на оператора определя дали той ще бъде изпълнен
+отляво надясно или отдясно на ляво. Събирането е с лява асоциативност,
+така че C<2 + 3 + 4> ще изпълни първо C<2 + 3>, а след това ще добави
+C<4> към резултата. Повдигането на степен е с дясна асоциативност и
+затова в израза C<2 ** 3 ** 4> първо ще се изпълни C<3 ** 4>, а след
+това C<2> ще бъде повдигнато на степен 81.
 
-It's worth your time to memorize the precedence and associativity of the common
-mathematical operators, but again simplicity rules the day. Use parentheses to
-make your intentions clear.
+Струва си времето да се запомни приоритетът и асоциативността на често
+използваните математически оператори, но винаги ползвайте кръгли скоби
+за да няма обърквания.
 
 =begin sidebar
 
