@@ -20,6 +20,14 @@ or phrases upon which somebody suggested and others silently agreed to follow or
 
 Числов, Низов и Булев Контекст
 
+=item value context
+
+стойностен контекст
+
+=item Coercion
+
+Третиране на данните
+
 =item  x
 
 translation with or without description
