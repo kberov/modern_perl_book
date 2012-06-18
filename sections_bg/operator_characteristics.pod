@@ -28,26 +28,29 @@ I<Приоритетът> на оператора определя кога Perl
 от този на събирането, затова резултата на C<7 + 7 * 10> след
 обработката ще бъде C<77>, а не C<140>.
 
-To force the evaluation of some operators before others, group their
-subexpressions in parentheses. In C<(7 + 7) * 10>, grouping the addition into a
-single unit forces its evaluation before the multiplication. The result is
+За да накарате интерпретатора да изпълни някои оператори преди други,
+трябва да оградите вътрешните изрази с кръгли скоби. В следния израз
+C<(7 + 7) * 10>, ограждането на действието събиране кара
+интерпретатора да извърши това действие преди умножението. Резултата е
 C<140>.
 
-C<perldoc perlop> contains a table of precedence. Read it, understand it, but
-don't bother memorizing it (almost no one does). Spend your time keeping your
-expressions simple, and then add parentheses to clarify your intent.
+C<perldoc perlop> съдържа таблица с приоритети на операторите.
+Прочетете я, разберете я, но не си губете времето да я наизустявате.
+По-добре използвайте прости изрази и ползвайте допълнително скоби за
+да посочвате изрично намеренията си на тези, които четат кода Ви.
 
-In cases where two operators have the same precedence, other factors such as
-associativity (L<associativity>) and fixity (L<fixity>) break the tie.
+В случаите когато два оператора имат еднакъв приоритет, други фактори
+като асоциативност (L<associativity>) и фиксираност (L<fixity>) може да
+укажаш влияние на реда на изпълнение на операциите.
 
-=head2 Associativity
+=head2 Асоциативност
 
 Z<associativity>
-X<associativity>
-X<associativity; left>
-X<left associativity>
-X<associativity; right>
-X<right associativity>
+X<асоциативност>
+X<асоциативност; лява>
+X<лява асоциативност>
+X<асоциативност; дясна>
+X<дясна асоциативност>
 
 The I<associativity> of an operator governs whether it evaluates from left to
 right or right to left. Addition is left associative, such that C<2 + 3 + 4>
