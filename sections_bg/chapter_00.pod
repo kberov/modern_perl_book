@@ -51,7 +51,7 @@ use autodie;
 =end programlisting
 
 Някои примери използват тестови функции от рода на C<ok()>, C<like()> и C<is()> 
-(L<testing>). Тези програми следват долния модел: 
+(L<testing>). Тези програми следват шаблона по-долу: 
 
 =begin programlisting
 
