@@ -1,6 +1,9 @@
 build/chapters
+build/chapters_bg
+build/html/_bg
 build/html/*.html
 build/pdf/*.pdf
 examples/
 !build/pdf/.gitignore
 !build/epub/.gitignore
+*.komodoproject
