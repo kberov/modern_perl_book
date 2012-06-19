@@ -29,7 +29,7 @@ sub Pod::PseudoPod::HTML::end_L
     if ($self->{scratch} =~ s/\b(\w+)$//)
     {
         my $link = $1;
-        die "Unknown link $link\n" unless exists $anchors->{$link};
+        warn "Unknown link $link\n" unless exists $anchors->{$link};
         $self->{scratch} .= '<a href="' . $anchors->{$link}[0] . "#$link\">"
                                         . $anchors->{$link}[1] . '</a>';
     }
