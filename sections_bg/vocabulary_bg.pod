@@ -28,6 +28,10 @@ or phrases upon which somebody suggested and others silently agreed to follow or
 
 Третиране на данните
 
+=item parser
+
+парсър
+
 =item  x
 
 translation with or without description
