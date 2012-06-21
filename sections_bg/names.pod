@@ -1,18 +1,18 @@
 =encoding utf8
 
-=head1 Names
+=head1 Имена
 
 Z<names>
 
 X<names>
 X<identifiers>
 
-I<Names> (or I<identifiers>) are everywhere in Perl programs: variables,
-functions, packages, classes, and even filehandles. These names all begin with
-a letter or an underscore and may optionally include any combination of
-letters, numbers, and underscores.  When the C<utf8> pragma (L<unicode>) is in
-effect, you may use any UTF-8 word characters in identifiers. These are all
-valid Perl identifiers:
+I<Имената> (или I<идентификаторите>) са навсякъде в Perl програмите: променливи, функции, пакети, класове,
+дори файлови манипулатори. Всички тези имена започват с буква или долна черта. След това е допустима произволна
+комбинация от букви, цифри и долни черти. 
+Когато е в сила правилото C<utf8> (L<unicode>), можете да използвате всеки текстов символ
+от UTF-8 в идентификаторите.
+Ето всички валидни Perl идентификатори:
 
 =begin programlisting
 
@@ -27,7 +27,7 @@ valid Perl identifiers:
 
 =end programlisting
 
-These are invalid Perl identifiers:
+А тези Perl идентификатори са невалидни:
 
 =begin programlisting
 
@@ -41,22 +41,22 @@ These are invalid Perl identifiers:
 
 X<symbolic lookups>
 
-I<Names exist primarily for the benefit of the programmer>. These rules apply
-only to literal names which appear as-is in your source code, such as C<sub
-fetch_pie> or C<my $waffleiron>. Only Perl's parser enforces the rules about
-identifier names.
+I<Имената съществуват на-вече за удобство на програмиста>. Това важи само
+за буквени имена, каквито се срещат във вашия изходен код, като C<sub
+fetch_pie> или C<my $waffleiron>. Но единствено парсърът на Perl може да прилага правилата
+за имена на идентификаторите.
 
-Perl's dynamic nature allows you to refer to entities with names generated at
-runtime or provided as input to a program. These I<symbolic lookups> provide
-flexibility at the expense of some safety. In particular, invoking functions or
-methods indirectly or looking up symbols in a namespace lets you bypass Perl's
-parser.
+Динамичният характер на Perl ви позволява да се обръщате към единиците с имена,
+генерирани по време на изпълнение, или дадени им при входа на програмата.
+Този метод за I<намиране на символи> предоставя гъвкавост, донякъде за сметка на сигурността.
+По-специално, непрякото извикване на функции или методи или търсенето на символи
+в пространство от имена ви дава възможност да заобиколите парсъра на Perl.
 
-Doing so can produce confusing code. As Mark Jason Dominus recommends so
-effectivelyN<U<http://perl.plover.com/varvarname.html>>, use a hash (L<hashes>)
-or nested data structure (L<nested_data_structures>).
+Такава практика може да доведе до доста объркващ код. Както Марк Джейсън Доминус препоръчва
+много удачноN<U<http://perl.plover.com/varvarname.html>>, ползвайте хеш (L<hashes>)
+или сложни структури от данни (L<nested_data_structures>).
 
-=head2 Variable Names and Sigils
+=head2 Имена на променливи и Знаци
 
 X<variables; names>
 X<scalar variables>
@@ -68,10 +68,10 @@ X<hashes>
 X<variables; hashes>
 X<sigil>
 
-I<Variable names> always have a leading I<sigil> (or symbol) which indicates
-the type of the variable's value. I<Scalar variables> (L<scalars>) use the
-dollar sign (C<$>). I<Array variables> (L<arrays>) use the at sign (C<@>).
-I<Hash variables> (L<hashes>) use the percent sign (C<%>):
+I<Имената на променливите> винаги започват със I<знак> (или символ),
+указващ типа стойност на променливата. I<Скаларните променливи> (L<scalars>) използват
+знака за долар (C<$>). I<Масивите> (L<arrays>) се обозначават с маймунка (C<@>).
+Пред I<хешовете> (L<hashes>) се слага знак за процент (C<%>):
 
 =begin programlisting
 
@@ -81,9 +81,8 @@ I<Hash variables> (L<hashes>) use the percent sign (C<%>):
 
 =end programlisting
 
-These sigils provide a visual namespacing for variable names. It's
-possible--though confusing--to declare multiple variables of the same name with
-different types:
+Тези знаци предоставят видимо пространство от имена за променливите. 
+Така е възможно--макар и объркващо--да се декларират множество променливи с еднакво име и от различни типове:
 
 =begin programlisting
 
