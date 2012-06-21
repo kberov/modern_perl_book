@@ -1,13 +1,12 @@
 =encoding utf8
 
-=head0 The Perl Language
+=head0 Езикът Perl
 
-Like a spoken language, the whole of Perl is a combination of several smaller
-but interrelated parts. Unlike spoken language, where nuance and tone of voice
-and intuition allow people to communicate despite slight misunderstandings and
-fuzzy concepts, computers and source code require precision. You can write
-effective Perl code without knowing every detail of every language feature, but
-you must understand how they work together to write Perl code well.
+Подобно на говоримите езици, Perl е съвкупност от редица по-малки, взаимосвързани части. Но в говоримите езици
+нюансите и тонът на гласа, и интуицията, позволяват на хората да общуват, въпреки съпътстващите недоразумения
+и размити понятия. За разлика от тях, компютрите и кодът изискват прецизност. Може да пишете ефективен код на Perl,
+без да е нужно да познавате детайлно всеки инструмент на езика. Но е задължително да разбирате как работят заедно,
+за да сте наистина добри в писането на код на Perl.
 
 L<names>
 
