@@ -11,8 +11,8 @@ I<Имената> (или I<идентификаторите>) са навсяк
 дори файлови манипулатори. Всички тези имена започват с буква или долна черта. След това е допустима произволна
 комбинация от букви, цифри и долни черти. 
 Когато е в сила правилото за C<utf8>N<"Прагмите" като C<utf8> включват правила,
-които парсърът и компилаторът спазват. (бел. прев.)> в изходния код (L<unicode>), можете да използвате всеки буквено-числов символ
-от UTF-8 в идентификаторите.
+които парсърът и компилаторът спазват. (бел. прев.)> в изходния код (L<unicode>),
+можете да използвате всеки буквено-числов символ от UTF-8 в идентификаторите.
 Ето някои валидни идентификатори в Perl:
 
 =begin programlisting
@@ -40,7 +40,7 @@ I<Имената> (или I<идентификаторите>) са навсяк
 
 =end programlisting
 
-X<symbolic lookups>
+X<намиране на символи>
 
 I<Имената съществуват най-вече за удобство на програмиста>. Това важи само
 за буквени имена, каквито се срещат във вашия изходен код, като C<sub
@@ -57,7 +57,7 @@ fetch_pie> или C<my $waffleiron>. Но единствено парсърът 
 много удачноN<U<http://perl.plover.com/varvarname.html>>, ползвайте хеш (L<hashes>)
 или сложни структури от данни (L<nested_data_structures>).
 
-=head2 Имена на променливи и Знаци
+=head2 Имена на променливи и Знаци за тип
 
 X<променливи; имена>
 X<скаларни променливи>
@@ -82,7 +82,7 @@ I<Имената на променливите> винаги започват с
 
 =end programlisting
 
-Тези знаци предоставят видимо пространство от имена за променливите. 
+Тези знаци предоставят видимо пространство от имена за променливите.
 Така е възможно--макар и объркващо--да се декларират множество променливи с еднакво име и от различни типове:
 
 =begin programlisting
@@ -91,14 +91,14 @@ I<Имената на променливите> винаги започват с
 
 =end programlisting
 
-Though Perl won't get confused, people reading this code will.
+Perl ще разчете правилно тези инструкции, но същото не важи и за хората, които ще видят този код.
 
-X<variant sigils>
+X<променящ се знак за тип>
 
-Perl 5's sigils are I<variant sigils>. As context determines how many items you
-expect from an operation or what type of data you expect to get, so the sigil
-governs how you manipulate the data of a variable.  For example, to access a
-single element of an array or a hash, you must use the scalar sigil (C<$>):
+Знаците за тип в Perl 5 са I<променящи се знаци за тип>. Контекстът определя количеството
+елементи или типа данни, които ще получите. А от знака за тип зависи какво ще направите
+с данните от променливи. Например, за да достъпите даден елемент от масив или хеш, трябва да
+ползвате знака за скалар (C<$>):
 
 =begin programlisting
 
@@ -113,10 +113,10 @@ single element of an array or a hash, you must use the scalar sigil (C<$>):
 X<lvalue>
 X<rvalue>
 
-The parallel with amount context is important. Using a scalar element of an
-aggregate as an I<lvalue> (the target of an assignment, on the left side of the
-C<=> character) imposes scalar context (L<context_philosophy>) on the I<rvalue>
-(the value assigned, on the right side of the C<=> character).
+Паралелът със значението на контекста е важен. Използването на скаларен елемент
+от съвкупност от данни като I<lvalue> (обектът на присвояване, вляво от знака C<=>),
+прилага скаларен контекст (L<context_philosophy>) на I<rvalue>
+(присвоената стойност, вдясно от знака C<=>)
 
 X<отрязъци>
 
@@ -143,7 +143,7 @@ curly brackets.
 =head2 Namespaces
 
 X<fully-qualified name>
-X<именовани пространства>
+X<пространства от имена>
 
 Perl provides a mechanism to group similar functions and variables into their
 own unique named spaces--I<namespaces> (L<packages>). A namespace is a named
