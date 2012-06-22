@@ -116,13 +116,13 @@ X<rvalue>
 Паралелът със значението на контекста е важен. Използването на скаларен елемент
 от съвкупност от данни като I<lvalue> (обектът на присвояване, вляво от знака C<=>),
 прилага скаларен контекст (L<context_philosophy>) на I<rvalue>
-(присвоената стойност, вдясно от знака C<=>)
+(присвоената стойност, вдясно от знака C<=>).
 
 X<отрязъци>
 
-Similarly, accessing multiple elements of a hash or an array--an operation
-known as I<slicing>--uses the at symbol (C<@>) and imposes list contextN<...
-even if the list itself has zero or one elements>:
+Съответно, при достъпването на множество елементи от хеш или масив--наричано още I<отрязване>--
+се използва символът маймунка (C<@>), който прилага списъчен контекстN<...дори ако самият списък 
+съдържа нула или един елемента>:
 
 =begin programlisting
 
@@ -134,11 +134,10 @@ even if the list itself has zero or one elements>:
 
 =end programlisting
 
-The most reliable way to determine the type of a variable--scalar, array, or
-hash--is to look at the operations performed on it. Scalars support all basic
-operations, such as string, numeric, and boolean manipulations. Arrays support
-indexed access through square brackets. Hashes support keyed access through
-curly brackets.
+Най-сигурният начин да се определи типа на една променлива--скалар, масив или хеш--
+е като се види какви процеси се изпълняват с нея. Скаларите поддържат всички основни процеси--
+низови, числови и булеви. Масивите осъществяват индексиран достъп посредством квадратни скоби.
+А хешовете имат достъп с ключ чрез фигурни скоби.
 
 =head2 Namespaces
 
