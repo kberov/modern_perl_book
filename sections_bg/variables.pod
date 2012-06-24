@@ -12,16 +12,9 @@ I<Променлива> в Perl е място за съхранение на с�
 C<a>, C<b> и C<c>, отколкото да проверяваме правилността ѝ чрез писането на дълъг
 списък с валидни стойности. Тази идея може да изглежда основополагаща. Но
 ефективното програмиране изисква от вас умението да балансирате между
-широкоприложимото и специфичното.
+общоприложимото и специфичното.
 
-
- A variable represents values; it's
-easier to explain the Pythagorean theorem in terms of the variables C<a>, C<b>,
-and C<c> than by intuiting its principle by producing a long list of valid
-values. This concept may seem basic, but effective programming requires you to
-manage the art of balancing the generic and reusable with the specific.
-
-=head2 Variable Scopes
+=head2 Обхват на променливите
 
 Z<variable_scopes>
 
@@ -29,10 +22,10 @@ X<variables; scope>
 X<scope>
 X<builtins; C<package>>
 
-Variables are visible to portions of your program depending on their scope
-(L<scope>). Most of the variables you will encounter have lexical scope
-(L<lexical_scope>). I<Files> themselves provide their own lexical scopes, such
-that the C<package> declaration on its own does not create a new scope:
+Променливите са видими за части от програмата ви, в зависимост от обхвата си
+(L<scope>). Повечето променливи има лексикален обхват (L<lexical_scope>).
+I<Файловете> си осигуряват такъв лексикслен обхват, че декларирането на C<пакет>
+само по себе си не създава нов обхват:
 
 =begin programlisting
 
@@ -47,10 +40,10 @@ that the C<package> declaration on its own does not create a new scope:
 
 =end programlisting
 
-X<builtins; C<package>; BLOCK>
+X<вградени функции; C<package>; BLOCK>
 
-As of Perl 5.14, you may provide a block to the C<package> declaration. This
-syntax I<does> provide a lexical scope:
+От версия Perl 5.14 насам можете да подавате блок при деклариране на C<package>.
+Този синтаксис I<придава> лексикален обхват:
 
 =begin programlisting
 
@@ -70,12 +63,12 @@ syntax I<does> provide a lexical scope:
 
 =end programlisting
 
-=head2 Variable Sigils
+=head2 Променливи знаци за тип
 
 Z<sigils>
 
-X<variables; sigils>
-X<sigils>
+X<променливи; знаци за тип>
+X<знаци за тип>
 
 The sigil of the variable in a declaration determines the type of the variable:
 scalar, array, or hash. The sigil used when accessing a variable varies
