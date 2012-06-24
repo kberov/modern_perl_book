@@ -1,13 +1,21 @@
 =encoding utf8
 
-=head1 Variables
+=head1 Променливи
 
 Z<variables>
 X<variable>
 
-A I<variable> in Perl is a storage location for a value (L<values>). While a
-trivial program can manipulate values directly, most programs work with
-variables to simplify the logic of the code. A variable represents values; it's
+I<Променлива> в Perl е място за съхранение на стойност (L<values>). Макар че и
+най-обикновената програма може да обработва стойностите директно, повечето програми
+работят с променливи, за да се опрости логиката на кода. Променливите заместват
+стойностите. Много по-лесно е да обясним Питагоровата теорема с променливите
+C<a>, C<b> и C<c>, отколкото да проверяваме правилността ѝ чрез писането на дълъг
+списък с валидни стойности. Тази идея може да изглежда основополагаща. Но
+ефективното програмиране изисква от вас умението да балансирате между
+широкоприложимото и специфичното.
+
+
+ A variable represents values; it's
 easier to explain the Pythagorean theorem in terms of the variables C<a>, C<b>,
 and C<c> than by intuiting its principle by producing a long list of valid
 values. This concept may seem basic, but effective programming requires you to
