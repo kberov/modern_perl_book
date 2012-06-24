@@ -75,46 +75,42 @@ X<знаци за тип>
 от това, което правите с нея. Например, декларирате масив като C<@values>.
 Извиквате първия елемент--единична стойност--от масива с C<$values[0]>. Извиквате
 списък със стойности от масива с C<@values[ @indices]>.
-The sigil of the variable in a declaration determines the type of the variable:
-scalar, array, or hash. The sigil used when accessing a variable varies
-depending on what you do to the variable. For example, you declare an array as
-C<@values>. Access the first element--a single value--of the array with 
-C<$values[0]>. Access a list of values from the array with C<@values[ @indices
-]>.
 
-=head2 Anonymous Variables
+=head2 Безименни променливи
 
-X<anonymous variables>
-X<variables; anonymous>
+X<безименни променливи>
+X<променливи; безименни>
 
-Perl variables do not I<require> names. Names exist to help you, the
-programmer, keep track of an C<$apple>, C<@barrels>, or C<%cheap_meals>.
-Variables created I<without> literal names in your source code are I<anonymous>
-variables. The only way to access anonymous variables is by reference
-(L<references>).
+Променливите в Perl не се I<нуждаят> от имена. Имената съществуват, та вие,
+програмистите, да можете да проследите някое C<$apple>, C<@barrels> или
+C<%cheap_meals>. Променливите в кода ви, създадени I<без> буквени имена, са
+I<безименни> променливи. Единственият начин за извикване на безименни променливи
+е чрез референции (L<references>).
 
-=head2 Variables, Types, and Coercion
+=head2 Променливи, Типове и Третиране на данни
 
-X<variables; types>
-X<variables; container type>
-X<variables; value type>
+X<променливи; типове>
+X<променливи; тип на контейнер>
+X<променливи; тип на стойност>
 
-A variable in Perl 5 represents both a value (a dollar cost, available pizza
-toppings, guitar shops with phone numbers) and the container which stores that
-value. Perl's type system deals with I<value types> and I<container types>.
-While a variable's I<container type>--scalar, array, or hash--cannot change,
-Perl is flexible about a variable's value type. You may store a string in a
-variable in one line, append to that variable a number on the next, and
-reassign a reference to a function (L<function_references>) on the third.
+Една променлива в Perl 5 се състои от два компонента--стойност(цена в долари,
+налични гарнитури за пица, телефонни номера на магазини за китари) и контейнер,
+в който се съхранява тази стойност. Сиситемата за типове в Perl работи с
+I<типове на стойност> и I<типове на контейнер>. I<Типа контейнер> на една
+променлива--скалар, масив или  хеш--не се променя. Докато, относно типа стойност на
+променливите, Perl проявява гъвкавост. На един ред може да съхраните низ в
+променлива, на следващия ред--да добавите число на същата променлива, а на третия
+--да присвоите референция към функция (L<function_references>).
 
-Performing an operation on a variable which imposes a specific value type may
-cause coercion (L<coercion>) from the variable's existing value type.
+Извършването на операция върху променлива, което налага специфичен тип стойност,
+може да причини третиране на данните (L<coercion>) от страна на действителния тип
+на стойност на променливата.
 
-For example, the documented way to determine the number of entries in an array
-is to evaluate that array in scalar context (L<context_philosophy>). Because a
-scalar variable can only ever contain a scalar, assigning an array to a scalar
-imposes scalar context on the operation, and an array evaluated in scalar
-context returns the number of elements in the array:
+Например, документираният начин за определяне броя на записите в един масив е като
+се представи този масив в скаларен контекст (L<context_philosophy>). Тъй като
+скаларните променливи могат да съдържат само скалари, присвояването на масив към
+скалар налага скаларен контекст на операцията. Така един масив, представен в
+скаларен контекст, връща броя на елементите от масива:
 
 =begin programlisting
 
@@ -122,4 +118,5 @@ context returns the number of elements in the array:
 
 =end programlisting
 
-This relationship between variable types, sigils, and context is essential.
+Тези взаимовръзки между типовете променливи, знаците за тип и контекста са от
+изключително значение.
