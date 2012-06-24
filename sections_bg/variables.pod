@@ -24,7 +24,7 @@ X<builtins; C<package>>
 
 Променливите са видими за части от програмата ви, в зависимост от обхвата си
 (L<scope>). Повечето променливи има лексикален обхват (L<lexical_scope>).
-I<Файловете> си осигуряват такъв лексикслен обхват, че декларирането на C<пакет>
+I<Файловете> си осигуряват такъв лексикслен обхват, че декларирането на C<package>
 само по себе си не създава нов обхват:
 
 =begin programlisting
@@ -70,10 +70,15 @@ Z<sigils>
 X<променливи; знаци за тип>
 X<знаци за тип>
 
+Декларираните знаци за тип определят типа на променливата: скалар, масив или хеш.
+Знаците за тип, използвани за извикване на променлива, са различни, в зависимост
+от това, което правите с нея. Например, декларирате масив като C<@values>.
+Извиквате първия елемент--единична стойност--от масива с C<$values[0]>. Извиквате
+списък със стойности от масива с C<@values[ @indices]>.
 The sigil of the variable in a declaration determines the type of the variable:
 scalar, array, or hash. The sigil used when accessing a variable varies
 depending on what you do to the variable. For example, you declare an array as
-C<@values>. Access the first element--a single value--of the array with
+C<@values>. Access the first element--a single value--of the array with 
 C<$values[0]>. Access a list of values from the array with C<@values[ @indices
 ]>.
 
