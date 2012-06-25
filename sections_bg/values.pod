@@ -18,14 +18,14 @@ X<стойности>
 стриктни вътрешни правила. Ефективните програми се нуждаят от ефективни (прости,
 бързи, възможно най-компактни и ефективни) начини за представяне на данните.
 
-=head2 Strings
+=head2 Низове
 
-X<strings>
+X<низове>
 
-A I<string> is a piece of textual or binary data with no particular formatting
-or contents. It could be your name, the contents of an image file, or your
-program itself. A string has meaning in the program only when you give it
-meaning.
+I<Низът> се състои от текстови или двоични данни, които нямат специално
+форматиране или съдържание. Би могло да е вашето име, съдържанието на файл с
+изображение или дори цялата ви програма. Низът има смисъл в програмата, само
+когато вие му зададете този смисъл.
 
 X<strings; delimiters>
 
