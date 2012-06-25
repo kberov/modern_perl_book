@@ -1,23 +1,22 @@
 =encoding utf8
 
-=head1 Values
+=head1 Стойности
 
 Z<values>
 
-X<variables>
-X<values>
+X<променливи>
+X<стойности>
 
-The structure of a program depends heavily on the means by which you model your
-data with appropriate variables.
+Структурата на една програма силно зависи от начина, по който присвоявате
+към данните си подходящи променливи.
 
-Where variables allow the abstract manipulation of data, the values they hold
-make programs concrete and useful. The more accurate your values, the better
-your programs.  These values are data--your aunt's name and address, the
-distance between your office and a golf course on the moon, or the weight of
-all of the cookies you've eaten in the past year. Within your program, the
-rules regarding the format of that data are often strict. Effective programs
-need effective (simple, fast, most compact, most efficient) ways of
-representing their data.
+Когато променливите позволяват абстрактно манипулиране с данните, стойностите им
+правят програмите конкретни и полезни. Колкото сте по-прецизни със стойностите,
+толкова по-добри са вашите програми. Стойностите са данни--името и адреса на
+леля ви, разстоянието между вашия офис и игрище за голф на Луната или теглото на
+всички бисквити, които сте изяли миналата година. Форматът на данните се следи от
+стриктни вътрешни правила. Ефективните програми се нуждаят от ефективни (прости,
+бързи, възможно най-компактни и ефективни) начини за представяне на данните.
 
 =head2 Strings
 
