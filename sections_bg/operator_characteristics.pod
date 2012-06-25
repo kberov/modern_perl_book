@@ -69,12 +69,12 @@ X<C<B::Deparse>>
 X<приоритет; пояснителна>
 X<асоциативност; пояснителна>
 
-Модулът C<B::Deparse>, който е част от ядрото на Perl, е незаменим
-инструмент за дебъгване. Стартирайте C<perl -MO=Deparse,-p> върху
-парче код за да видите как точно Perl обработва различните оператори в
-зависимост от техния приоритет и асоциативност. Флагът C<-p> добавя
-допълнителни групиращи скоби, които често правят редът на изпълнение
-по-ясен.
+Модулът C<B::Deparse>, който е част от стандартната библиотека с
+модули на Perl, е незаменим инструмент за дебъгване. Стартирайте
+C<perl -MO=Deparse,-p> върху парче код за да видите как точно Perl
+обработва различните оператори в зависимост от техния приоритет и
+асоциативност. Флагът C<-p> добавя допълнителни групиращи скоби, които
+често правят редът на изпълнение по-ясен.
 
 Не забравяйте, че оптимизаторът на Perl ще опрости математически
 операции като тези в предните примери. За да избегнете това,
@@ -82,24 +82,25 @@ X<асоциативност; пояснителна>
 
 =end sidebar
 
-=head2 Arity
+=head2 Брой на аргументите
 
 Z<arity>
 
-X<arity>
-X<operators; arity>
-X<nullary>
-X<unary>
-X<binary>
-X<trinary>
-X<listary>
+X<Брой на аргументите>
+X<оператори; Брой на аргументите>
+X<нулев брой аргументи>
+X<унарна>
+X<бинарна>
+X<тринарна>
+X<списъчно>
 
-The I<arity> of an operator is the number of operands on which it operates.  A
-I<nullary> operator operates on zero operands. A I<unary> operator operates on
-one operand. A I<binary> operator operates on two operands. A I<trinary>
-operator operates on three operands. A I<listary> operator operates on a list
-of operands. An operator's documentation and examples should make its arity
-clear.
+Всеки оператор работи върху някакъв брой аргументи.  A I<nullary>
+operator operates on zero operands. A I<unary> operator operates on
+one operand. I<Бинарния> оператор работи върху два
+аргумента. I<Тернарен> оператор работи върху три аргумента.
+I<списъчен> оператор работи върху списък с аргументи. Документацията
+за всеки оператор и дадените примери с него би трябвало да покажаш
+ясно върху какъв брой аргументи работи.
 
 For example, the arithmetic operators are binary operators, and are usually
 left associative. C<2 + 3 - 4> evaluates C<2 + 3> first; addition and
