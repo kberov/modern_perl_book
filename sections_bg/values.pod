@@ -10,7 +10,7 @@ X<стойности>
 Структурата на една програма силно зависи от начина, по който присвоявате
 към данните си подходящи променливи.
 
-Когато променливите позволяват абстрактно манипулиране с данните, стойностите им
+Когато променливите позволяват абстрактно манипулиране на данните, стойностите им
 правят програмите конкретни и полезни. Колкото сте по-прецизни със стойностите,
 толкова по-добри са вашите програми. Стойностите са данни--името и адреса на
 леля ви, разстоянието между вашия офис и игрище за голф на Луната или теглото на
@@ -27,11 +27,10 @@ I<Низът> се състои от текстови или двоични да
 изображение или дори цялата ви програма. Низът има смисъл в програмата, само
 когато вие му зададете този смисъл.
 
-X<strings; delimiters>
+X<низове; разделители>
 
-To represent a literal string in your program, surround it with a pair of
-quoting characters. The most common I<string delimiters> are single and double
-quotes:
+Литерален низ се указва чрез заграждането му с чифт кавички. Най-често
+използваните I<разделители за низ> са единичните и двойни кавички:
 
 =begin programlisting
 
@@ -40,11 +39,11 @@ quotes:
 
 =end programlisting
 
-X<strings; single-quoted>
+X<низове; единични кавички>
 
-Characters in a I<single-quoted string> represent themselves literally, with
-two exceptions. Embed a single quote inside a single-quoted string by escaping
-the quote with a leading backslash:
+Символите в I<низ с единични кавички> означават буквално самите себе си, с две
+изключения. Слагане на единична кавичка в низ с единични кавички--кавичката се
+избягва, като сложите пред нея обратно наклонена черта:
 
 =begin programlisting
 
@@ -53,8 +52,8 @@ the quote with a leading backslash:
 
 =end programlisting
 
-You must also escape any backslash at the end of the string to avoid escaping
-the closing delimiter and producing a syntax error:
+Трябва да избягвате също и обратно наклонена черта в края низа--иначе тя ще
+пренебрегне затварящия ограничител и ще се получи синтактична грешка:
 
 =begin programlisting
 
@@ -63,8 +62,9 @@ the closing delimiter and producing a syntax error:
 
 =end programlisting
 
-Any other backslash will be part of the string as it appears, unless two
-backslashes are adjacent, in which case the first will escape the second:
+Във всички други случаи обратно наклонена черта може да е част от низ, освен две
+последователни обратно наклонени черти, тъй като първата ще пренебрегне втората:
+
 
 =begin programlisting
 
@@ -73,11 +73,10 @@ backslashes are adjacent, in which case the first will escape the second:
 
 =end programlisting
 
-X<strings; double-quoted>
+X<низове; двойни кавички>
 
-A I<double-quoted string> has several more special characters available. For
-example, you may encode otherwise invisible whitespace characters in the
-string:
+I<Низът с двойни кавички> съдържа някои по-специални символи. Например, може да
+се кодират иначе невидими знаци, на празно място в низ: 
 
 =begin programlisting
 
@@ -89,14 +88,13 @@ string:
 
 =end programlisting
 
-This demonstrates a useful principle: the syntax used to declare a string may
-vary. You can represent a tab within a string with the C<\t> escape or by
-typing a tab directly. Within Perl's purview, both strings behave the same way,
-even though the specific representation of the string may differ in the source
-code.
+Това онагледява едно много полезно правило: синтаксисът за деклариране на низ
+може да се променя. Можете да означите табулатор в низ с този знак C<\t>, или да
+го въведете директно. В юрисдикцията ';)' на Perl и двата низа работят еднакво--
+независимо от различното представяне на низа в изходния код.
 
-A string declaration may cross logical newlines; these two declarations are
-equivalent:
+Декларирането на низ може да премине логически и на нов ред; тези две декларации
+са равностойни:
 
 =begin programlisting
 
@@ -107,7 +105,7 @@ equivalent:
 
 =end programlisting
 
-These sequences are often easier to read than their whitespace equivalents.
+Тези редове често са по-лесни за четене от своите празни съответствия.
 
 X<concatenation>
 X<strings; concatenation>
