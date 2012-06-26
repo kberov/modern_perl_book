@@ -111,9 +111,9 @@ X<concatenation>
 X<strings; concatenation>
 X<operators; C<.>>
 
-Perl strings have variable lengths. As you manipulate and modify strings, Perl
-will change their sizes as appropriate. For example, you can combine multiple
-strings into a larger string with the I<concatenation> operator C<.>:
+Низовете в Perl имат променяща се дължина. Като манипулирате и изменяте низ,
+Perl съответно променя дължината му. Например, можете да обедините множество
+низове в по-голям низ със I<свързващия> оператор C<.>:
 
 =begin programlisting
 
@@ -121,14 +121,14 @@ strings into a larger string with the I<concatenation> operator C<.>:
 
 =end programlisting
 
-This is effectively the same as if you'd initialized the string all at once.
+Това е също толкова ефикасно, както и ако инициализирате целия низ наведнъж.
 
-X<interpolation>
-X<strings; interpolation>
+X<интерполация>
+X<низове; интерполация>
 
-You may also I<interpolate> the value of a scalar variable or the values of an
-array within a double-quoted string, such that the I<current> contents of the
-variable become part of the string as if you'd concatenated them:
+Можете също да I<интерполирате> стойността на скаларна променлива или стойностите
+на масив в низ с двойни кавички. Така I<текущото> съдържание на променливата ще
+стане част от низа, както при свързване (concatenation):
 
 =begin programlisting
 
@@ -139,10 +139,10 @@ variable become part of the string as if you'd concatenated them:
 
 =end programlisting
 
-X<escaping>
+X<избягване>
 
-Include a literal double-quote inside a double-quoted string by I<escaping> it
-(that is, preceding it with a leading backslash):
+Включване на литерал с двойни кавички в низ с двойни кавички чрез I<избягването>
+им (това става като пред кавичките се сложи обратна наклонена черта):
 
 =begin programlisting
 
@@ -150,11 +150,12 @@ Include a literal double-quote inside a double-quoted string by I<escaping> it
 
 =end programlisting
 
-X<operators; quoting>
-X<C<q>; single quoting operator>
-X<operators; C<q>>
-X<C<qq>; double quoting operator>
-X<operators; C<qq>>
+X<оператори; кавички>
+X<C<q>; оператор на единични кавички>
+X<оператори; C<q>>
+X<C<qq>; оператор на двойни кавички>
+X<оператори; C<qq>>
+
 
 When repeated backslashing becomes unwieldy, use an alternate I<quoting
 operator> by which you can choose an alternate string delimiter. The C<q>
