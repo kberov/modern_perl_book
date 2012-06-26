@@ -156,15 +156,13 @@ X<оператори; C<q>>
 X<C<qq>; оператор на двойни кавички>
 X<оператори; C<qq>>
 
-
-When repeated backslashing becomes unwieldy, use an alternate I<quoting
-operator> by which you can choose an alternate string delimiter. The C<q>
-operator indicates single quoting, while the C<qq> operator provides double
-quoting behavior. The character immediately following the operator determines
-the characters used to delimit the strings. If the character is the opening
-character of a balanced pair--such as opening and closing braces--the closing
-character will be the final delimiter. Otherwise, the character itself will be
-both the starting and ending delimiter.
+Ако повтарянето на обратно наклонена черта ви дотегне, го заместете с
+I<оператор на кавички>, с който може да изберете заместващ разделител на низ.
+Операторът C<q> задава единични кавички, а C<qq>--двойни. Символът веднага след
+оператора посочва какви са разделителите на низовете. Ако символът е отварящият
+от двойка симетрични знаци--като отваряща и затваряща фигурна скоба--то
+затварящият символ ще бъде крайният разделител. В противен случай, самият символ
+ще бъде и начален и краен разделител.
 
 =begin programlisting
 
