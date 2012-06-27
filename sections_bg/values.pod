@@ -236,51 +236,53 @@ heredoc.
 Z<unicode>
 X<Unicode>
 
-I<Unicode> is a system for representing the characters of the world's written
-languages. While most English text uses a character set of only 127 characters
-(which requires seven bits of storage and fits nicely into eight-bit bytes),
-it's naE<iuml>ve to believe that you won't someday need an umlaut.
+I<Уникод> е система за представяне на символи от всички писмени езици. Повечето
+текстове на английски език ползват набор от само 127 символа (които се съхраняват
+в седем бита и пасват удобно в осем-битови байта). Но е наивно (naE<iuml>ve) да
+се вярва, че някой ден няма да ви потрябва умлаут (umlaut)N<Мутация на гласните
+в германските езици, преглас, бел.прев.>
 
-Perl 5 strings can represent either of two separate but related data types:
+Низовете в Perl 5 могат да представят всеки от два отделни, но свързани типа
+данни:
 
 X<codepoint>
 
 =over 4
 
-=item Sequences of Unicode characters
+=item Последователност на знаците в Уникод
 
-Each character has a I<codepoint>, a unique number which identifies it in the
-Unicode character set.
+Всеки символ има I<codepoint> (позиция), уникален идентифициращ номер в набора
+от символи на Уникод.
 
-=item Sequences of octets
+=item Последователност от октети (набор от осем бита)
 
-X<octet>
+X<октет>
 
-Binary data is a sequence of I<octets>--8 bit numbers, each of which can
-represent a number between 0 and 255.
+Двоичните данни представляват последователност от I<октети>--8 битови числа,
+всяко от които представя число между 0 и 255.
 
 =back
 
 =begin tip Words Matter
 
-Why I<octet> and not I<byte>? Assuming that one character fits in one byte will
-cause you no end of Unicode grief. Separate the idea of memory storage from
-character representation.
+Защо I<октет>, а не I<байт>? Ако приемем, че един символ отговаря на един байт,
+това би довело до безброй неприятности с Уникод. Затова разделяме идеята за
+съхранение на символа от самото представяне на символа.
 
 =end tip
 
-Unicode strings and binary strings look similar. Each has a C<length()>.  Each
-supports standard string operations such as concatenation, splicing, and
-regular expression processing. Any string which is not purely binary data is
-textual data, and should be a sequence of Unicode characters.
+Уникод низовете и двоичните низове си приличат. Всеки от тях има C<дължина()>.
+Всеки поддържа стандартните операции за низ, като свързване (concatenation),
+splicing и обработка на регулярни изрази. Всеки низ, който не е изцяло от двоични
+данни, е низ от текстови данни, и трябва да е поредица от Уникод символи.
 
-However, because of how your operating system represents data on disk or from
-users or over the network--as sequences of octets--Perl can't know if the data
-you read is an image file or a text document or anything else. By default, Perl
-treats all incoming data as sequences of octets. You must add a specific
-meaning to that data.
+Обаче, операционната ви система представя данните (от диска, от потребителите,
+или извън мрежата) като последователност от октети. Поради това Perl не знае дали
+данните са файл с изображение, текстов документ или нещо друго. По подразбиране,
+Perl третира всички входящи данни като поредици от октети.  Вие трябва да добавите
+специфично значение на тези данни.
 
-=head3 Character Encodings
+=head3 Кодиране на символите
 
 X<encoding>
 X<Unicode; encoding>
@@ -288,35 +290,36 @@ X<UTF-8>
 X<ASCII>
 X<Latin-1>
 
-A Unicode string is a sequence of octets which represents a sequence of
-characters. A I<Unicode encoding> maps octet sequences to characters. Some
-encodings, such as UTF-8, can encode all of the characters in the Unicode
-character set. Other encodings represent a subset of Unicode characters. For
-example, ASCII encodes plain English text with no accented characters, while
-Latin-1 can represent text in most languages which use the Latin alphabet.
+Уникод низ е поредица от октети, които съответстват на поредица от символи.
+I<Кодирането в Уникод> установява съответствия между поредиците от октети и
+символите. Някои кодировки, като UTF-8, могат да кодират всички символи от
+Набора със символи на Уникод. Други кодировки представляват подмножество от
+Уникод символи. Например, ASCII кодира обикновен текст на английски без символи
+с ударения, докато Latin-1 може да представи повечето езици, ползващи латинската
+азбука.
 
-To avoid most Unicode problems, always decode to and from the appropriate
-encoding at the inputs and outputs of your program.
+За да избегнете възможните проблеми с Уникод, винаги декодирайте към или от
+подходящата кодировка на входа и изхода на вашата програма.
 
-=begin tip An Evolving Standard
+=begin tip Развиващ се стандарт
 
-Perl 5.12 supports the Unicode 5.2 standard, while Perl 5.14 supports Unicode
-6.0. If you need to care about the differences between Unicode versions, you
-probably already know to see U<http://unicode.org/versions/>.
+Perl 5.12 поддържа стандарта Уникод 5.2, докато Perl 5.14 поддържа Уникод 6.0.
+Ако ви интересуват разликите между версиите на Уникод, може да видите на този
+адрес: U<http://unicode.org/versions/>.
 
 =end tip
 
-=head3 Unicode in Your Filehandles
+=head3 Уникод във вашите файлови манипулатори
 
 X<C<open>>
 X<builtins; C<open>>
 X<IO layers>
 
-When you tell Perl that a specific filehandle (L<files>) works with encoded
-text, Perl will convert the incoming octets to Unicode strings automatically.
-To do this, add an IO layer to the mode of the C<open> builtin. An I<IO layer>
-wraps around input or output and converts the data. In this case, the C<:utf8>
-layer decodes UTF-8 data:
+Когато кажете на Perl, че даден файлов манипулатор (L<files>) работи с кодиран
+текст, Perl автоматично ще преобразува входящите октети в Уникод низове. Това
+става, като добавите IO слой към метода на вградената функция C<open>. I<IO слоят>
+обгражда входа или изхода и преобразува данните. В този случай слоят C<:utf8>
+декодира UTF-8 данните:
 
 =begin programlisting
 
@@ -331,8 +334,8 @@ layer decodes UTF-8 data:
 X<C<binmode>>
 X<builtins; C<binmode>>
 
-You may also modify an existing filehandle with C<binmode>, whether for input
-or output:
+Можете също да промените файлов манипулатор с C<binmode>, независимо на входа
+или на изхода.
 
 =begin programlisting
 
@@ -344,11 +347,11 @@ or output:
 
 =end programlisting
 
-Without the C<utf8> mode, printing Unicode strings to a filehandle will result
-in a warning (C<Wide character in %s>), because files contain octets, not
-Unicode characters.
+Извън режима C<utf8>, отпечатването на Уникод низове към файлов манипулатор ще
+доведе до предупреждение за неточен символ (C<Wide character in %s>), защото
+файла съдържа октети, а не Уникод символи.
 
-=head3 Unicode in Your Data
+=head3 Уникод във вашите данни
 
 X<C<Encode>>
 X<C<decode()>>
