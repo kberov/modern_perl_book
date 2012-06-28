@@ -41,11 +41,14 @@ or phrases upon which somebody suggested and others silently agreed to follow or
 именовано пространство; пространство от имена
 
 =item arity
+
 броя на аргументите на оператор;
 
 =item postcircumfix operator
 
 оператор, които следва след някои от аргументите си и огражда други; например извикването на функция, достъпът до елементи на масив или хеш
+
+=item numeric comparison operator
 
 =item  x
 
