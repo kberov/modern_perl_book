@@ -1,91 +1,96 @@
 =encoding utf8
 
-=head1 Operator Types
+=head1 Типове оператори
 
 Z<operator_types>
 
-Perl operators provide value contexts (L<value_contexts>) to their operands.
-To choose the appropriate operator, understand the values of the operands you
-provide as well as the value you expect to receive.
+Операторите в Perl указват стойностния контекст, в който аргументите
+ще бъдат изпълнени.  За да изберете правилния оператор, трябва да
+разберете стойностите на аргументите, които подавате, както и
+стойността, която очаквате да получите.
 
-=head2 Numeric Operators
+=head2 Цифрови оператори
 
 Z<numeric_operators>
 
-X<operators; numeric>
-X<operators; arithmetic>
-X<operators; C<+>>
-X<C<+>; numeric operator>
-X<operators; C<->>
-X<C<->; numeric operator>
-X<operators; C<*>>
-X<C<*>; numeric operator>
-X<operators; C</>>
-X<C</>; numeric operator>
-X<operators; C<**>>
-X<C<**>; numeric operator>
-X<operators; C<%>>
-X<C<%>; numeric operator>
-X<operators; C<+=>>
-X<C<+=>; numeric operator>
-X<operators; C<-=>>
-X<C<-=>; numeric operator>
-X<operators; C<*=>>
-X<C<*=>; numeric operator>
-X<operators; C</=>>
-X<C</=>; numeric operator>
-X<operators; C<**=>>
-X<C<**=>; numeric operator>
-X<operators; C<%=>>
-X<C<%=>; numeric operator>
-X<operators; C<-->>
-X<C<-->; numeric operator>
+X<оператори; цифров>
+X<оператори; аритметичен>
+X<оператори; C<+>>
+X<C<+>; цифров оператор>
+X<оператори; C<->>
+X<C<->; цифров оператор>
+X<оператори; C<*>>
+X<C<*>; цифров оператор>
+X<оператори; C</>>
+X<C</>; цифров оператор>
+X<оператори; C<**>>
+X<C<**>; цифров оператор>
+X<оператори; C<%>>
+X<C<%>; цифров оператор>
+X<оператори; C<+=>>
+X<C<+=>; цифров оператор>
+X<оператори; C<-=>>
+X<C<-=>; цифров оператор>
+X<оператори; C<*=>>
+X<C<*=>; цифров оператор>
+X<оператори; C</=>>
+X<C</=>; цифров оператор>
+X<оператори; C<**=>>
+X<C<**=>; цифров оператор>
+X<оператори; C<%=>>
+X<C<%=>; цифров оператор>
+X<оператори; C<-->>
+X<C<-->; цифров оператор>
 
-Numeric operators impose numeric contexts on their operands. These operators
-are the standard arithmetic operators such as addition (C<+>), subtraction
-(C<->), multiplication (C<*>), division (C</>), exponentiation (C<**>), modulo
-(C<%>), their in-place variants (C<+=>, C<-=>, C<*=>, C</=>, C<**=>, and
-C<%=>), and both postfix and prefix auto-decrement (C<-->).
+Цифровите оператори налагат цифров контекст върху своите
+аргументи. Операторите, които правят това, са стандартните аритметични
+оператори като събиране (C<+>); изваждане (C<->); умножение (C<*>);
+деление (C</>); повдигане на степен (C<**>); деление по модул (C<%>);
+техните варианти, които работят директно върху променливата (C<+=>,
+C<-=>, C<*=>, C</=>, C<**=>, и C<%=>); и postfix и prefix автоматично
+намаляване на (C<-->).
 
-The auto-increment operator has special string behavior
-(L<auto_increment_operator>).
+Операторът за автоматично увеличение има специално поведение, когато
+се прилага върху низови стойности (L<auto_increment_operator>).
 
-X<operators; C<==>>
-X<operators; C<!=>>
-X<<< operators; C<< E<lt> >> >>>
-X<<< operators; C<< E<gt> >> >>>
-X<<< operators; C<< E<lt>= >> >>>
-X<<< operators; C<< E<gt>= >> >>>
-X<<< operators; C<< E<lt>=E<gt> >> >>>
+X<оператори; C<==>>
+X<оператори; C<!=>>
+X<<< оператори; C<< E<lt> >> >>>
+X<<< оператори; C<< E<gt> >> >>>
+X<<< оператори; C<< E<lt>= >> >>>
+X<<< оператори; C<< E<gt>= >> >>>
+X<<< оператори; C<< E<lt>=E<gt> >> >>>
 
-X<C<!=>; numeric comparison operator>
-X<C<==>; numeric comparison operator>
-X<<< C<< E<gt> >>; numeric comparison operator >>>
-X<<< C<< E<lt> >>; numeric comparison operator >>>
-X<<< C<< E<gt>= >>; numeric comparison operator >>>
-X<<< C<< E<lt>= >>; numeric comparison operator >>>
-X<<< C<< E<lt>=E<gt> >>; numeric comparison operator >>>
+X<C<!=>; оператор за цифрово сравнение>
+X<C<==>; оператор за цифрово сравнение>
+X<<< C<< E<gt> >>; оператор за цифрово сравнение >>>
+X<<< C<< E<lt> >>; оператор за цифрово сравнение >>>
+X<<< C<< E<gt>= >>; оператор за цифрово сравнение >>>
+X<<< C<< E<lt>= >>; оператор за цифрово сравнение >>>
+X<<< C<< E<lt>=E<gt> >>; оператор за цифрово сравнение >>>
 
-Several comparison operators impose numeric contexts upon their operands.
-These are numeric equality (C<==>), numeric inequality (C<!=>), greater than
-(C<< E<gt> >>), less than (C<< E<lt> >>), greater than or equal to (C<< E<gt>=
->>), less than or equal to (C<< E<lt>= >>), and the sort comparison operator
-(C<< E<lt>=E<gt> >>).
+Няколко оператора за сравнение налагат цифров контекст върху своите
+аргументи. Те са оператора за цифрово равенство (C<==>); за цифрово
+неравенство (C<!=>); по-голямо (C<< E<gt> >>); по-малко (C<< E<lt>
+>>); по-голямо или равно (C<< E<gt>= >>); по-малко или равно (C<<
+E<lt>= >>); и сортиращият оператор за сравнение (C<< E<lt>=E<gt>
+>>()).
 
-=head2 String Operators
+=head2 Оператори за работа с низове
 
-X<operators; string>
-X<strings; operators>
-X<operators; C<=~>>
-X<C<=~>; string operator>
-X<operators; C<!~>>
-X<C<!~>; string operator>
-X<operators; C<.>>
-X<C<.>; string operator>
+X<оператори; низ>
+X<низове; оператори>
+X<оператори; C<=~>>
+X<C<=~>; низов operator>
+X<оператори; C<!~>>
+X<C<!~>; низов operator>
+X<оператори; C<.>>
+X<C<.>; низов operator>
 
-String operators impose string contexts on their operands. These operators are
-positive and negative regular expression binding (C<=~> and C<!~>,
-respectively), and concatenation (C<.>).
+Операторите за низове налагат нивоз контексто върху своите
+аргументи. Тези оператори са операторите за положително и отрицателно
+обвързване на регулярен израз (C<=~> и C<!~>), както и оператора за
+конкатация (C<.>).
 
 X<operators; C<eq>>
 X<operators; C<ne>>
