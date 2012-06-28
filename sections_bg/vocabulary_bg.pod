@@ -43,12 +43,11 @@ or phrases upon which somebody suggested and others silently agreed to follow or
 =item arity
 броя на аргументите на оператор;
 
-=item post circumfix
+=item postcircumfix operator
 
-ако са кръгли скобите извикват функция;
+оператор, които следва след някои от аргументите си и огражда други; например извикването на функция, достъпът до елементи на масив или хеш
 
-Източник: <whiteknight> Basically, when I say a "C-alike syntax" I'm talking about post-circumfix parenthesis being a function call, brackets to delimit blocks, etc
-Връзка: http://irclog.perlgeek.de/parrot/2011-06-27
+=item 
 
 =item  x
 
