@@ -47,8 +47,6 @@ or phrases upon which somebody suggested and others silently agreed to follow or
 
 оператор, които следва след някои от аргументите си и огражда други; например извикването на функция, достъпът до елементи на масив или хеш
 
-=item 
-
 =item  x
 
 translation with or without description
