@@ -1,0 +1,159 @@
+=encoding utf8
+
+Z<perl_community>
+
+=head1 Сборни места на общността
+
+X<perl.org>
+X<websites; perl.org>
+
+Основният уеб-сайт на Perl може да бъде намерен на адрес U<http://www.perl.org/> 
+на него ще откриете връзки към документацията на Perl, програмен код, напътствия, 
+пощенски списъци, както и важните съвместни проекти на общността. Ако Perl е нещо ново за вас,
+пощенските списъци за начинаещи са едно много дружелюбно място, кадето можете спокойно
+да зададете своите въпроси и да получите полезен съвет и точен отговор.
+Първо разгледайте U<http://learn.perl.org/faq/beginners.html>.
+
+На този уеб-сайт пък, си дават среша разработчиците на Perl U<http://dev.perl.org/>, 
+там могат да се намерят врзки към най-важните ресурси използвани при разработката на 
+ядрото на Perl 5 и Perl 6N<Може да прегледате и този адрес U<http://www.perl6.org/>>.
+
+X<perl.com>
+X<websites; perl.com>
+
+На сайтът Perl.com се публикуват статии и напътствия за Perl и Perl-културата. Архивите
+на този сайт изобилстват с документи, някои от които датират от далечният 20ти век.
+За повече информация се разровете в U<http://www.perl.com/>.
+
+X<cpan.org>
+X<websites; cpan.org>
+X<MetaCPAN>
+X<websites; MetaCPAN>
+
+Основното местонахождение на CPAN (L<cpan>) е U<http://www.cpan.org/>, въпреки това опитните
+потребители посвещават по-голяма част от времето си на U<http://search.cpan.org/>. 
+Това основно място за разпространение на готов за употреба, безплатен Perl програмен код
+е изкючително съществена част от Perl общността. MetaCPAN (U<https://metacpan.org/>) 
+пък предоставя по-нов и по-различен достъп до CPAN.
+
+X<PerlMonks>
+X<websites; PerlMonks>
+
+PerlMonks, намиращ се на U<http://perlmonks.org/>, е сайт изцяло посветен на
+разисквания засягащи програмирането с Perl. Единадесет годишната история на този 
+сайт го превръща в нещо като светиня измежду сайтовете съдържащи въпроси и отговори
+касаещи езиците за програмиране.
+
+X<blogs.perl.org>
+X<websites; blogs.perl.org>
+
+Съществуват и не малко сайтове, предлагащи новини и коментари. Добър пример
+е U<http://blogs.perl.org/> който свободна блог-платформа е широко отворен към всеки 
+интересуващ се от Perl общността.
+
+X<Enlightened Perl Organization>
+X<Planet Perl>
+X<Planet Perl Iron Man>
+X<websites; Planet Perl>
+X<websites; Planet Perl Iron Man>
+
+Други сайтове обединявават различни хакери на Perl, като примери могат да бъдат посочни
+U<http://perlsphere.net/>, U<http://planet.perl.org/>, и
+U<http://ironman.enlightenedperl.org/>. Последният, е инициатива на 
+Организацията на посветените в Perl(Enlightened Perl Organization) (U<http://enlightenedperl.org/>) 
+и е посветен на това да се увеличава количеството и подобрява качеството на публикациите
+за/на Perl в интернет.
+
+X<Perl Buzz>
+X<websites; Perl Buzz>
+X<Perl Weekly>
+X<websites; Perl Weekly>
+
+Perl Buzz (U<http://perlbuzz.com/>) пък събира и публикува някои от 
+най-интересните и полезните новини за Perl на определен период. Perl Weekly
+(U<http://perlweekly.com/>) предлага седмичник обединяващ 
+мнения касаещи новините около Perl.
+
+=head1 Сайтове на разработчиците
+
+X<RT>
+X<Best Practical>
+
+Най-добрите практични решения (U<http://bestpractical.com/>) поддържа класация по 
+популярност на търсенето на модули от даден автор както за авторите на CPAN модули
+, така и за разработчиците на Perl 5 и Perl 6. Всяка дистрибуция в CPAN си има собствена
+опашка за проследяване на заявките, свързана към C<search.cpan.org> 
+и на разположение на U<http://rt.cpan.org/>.
+Perl 5 и Perl 6 си имат отделни опашки на U<http://rt.perl.org/>.
+
+X<Perl 5 Porters>
+X<p5p>
+
+The Perl 5 Porters (or I<p5p>) този пощенски списък е сборен пункт за разработката на 
+самият Perl 5. Може да го разгледате на
+U<http://lists.cpan.org/showlist.cgi?name=perl5-porters>.
+
+X<TPF>
+X<The Perl Foundation>
+X<TPF; wiki>
+X<websites; TPF wiki>
+
+The Perl Foundation (U<http://www.perlfoundation.org/>) hosts a wiki for all
+things Perl 5. See U<http://www.perlfoundation.org/perl5>.
+
+X<Github>
+X<gitpan>
+X<websites; gitpan>
+
+Many Perl hackers use Github (U<http://github.com/>) to host their
+projectsN<...  including the sources of this book at
+U<http://github.com/chromatic/modern_perl_book/>>. See especially Gitpan
+(U<http://github.com/gitpan/>), which hosts Git repositories chronicling the
+complete history of every distribution on the CPAN.
+
+=begin tip A Local Git Mirror
+
+X<CPAN; C<Git::CPAN::Patch>>
+X<Champoux, Yanick>
+
+GitPAN receives infrequent updates. As an alternative, consider using Yanick
+Champoux's wonderful C<Git::CPAN::Patch> module.
+
+=end tip
+
+=head1 Events
+
+X<YAPC>
+
+The Perl community holds countless conferences, workshops, seminars, and
+meetings. In particular, the community-run YAPC--Yet Another Perl
+Conference--is a successful, local, low-cost conference model held on multiple
+continents. See U<http://yapc.org/>.
+
+The Perl Foundation wiki lists other events at
+U<http://www.perlfoundation.org/perl5/index.cgi?perl_events>.
+
+X<Perl Mongers>
+
+Hundreds of local Perl Mongers groups get together frequently for technical
+talks and social interaction. See U<http://www.pm.org/>.
+
+=head1 IRC
+
+X<IRC>
+X<IRC; #moose>
+X<IRC; #catalyst>
+X<IRC; #perl-help>
+X<IRC; #perl>
+
+When Perl mongers can't meet in person, many collaborate and chat online
+through the textual chat system known as IRC. Many of the most popular and
+useful Perl projects have their own IRC channels, such as I<#moose> and
+I<#catalyst>.
+
+The main server for Perl community is U<irc://irc.perl.org/>. Notable channels
+include I<#perl-help>, for general assistance on Perl programming, and
+I<#perl-qa>, devoted to testing and other quality issues. Be aware that the
+channel I<#perl> is a general purpose channel for discussing whatever its
+participants want to discussN<... and, as such, it's not primarily a
+helpdesk.>.
