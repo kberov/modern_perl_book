@@ -89,7 +89,7 @@ Perl 5 и Perl 6 си имат отделни опашки на U<http://rt.perl
 X<Perl 5 Porters>
 X<p5p>
 
-The Perl 5 Porters (or I<p5p>) този пощенски списък е сборен пункт за разработката на 
+The Perl 5 Porters (или I<p5p>) този пощенски списък е сборен пункт за разработката на 
 самият Perl 5. Може да го разгледате на
 U<http://lists.cpan.org/showlist.cgi?name=perl5-porters>.
 
@@ -98,45 +98,47 @@ X<The Perl Foundation>
 X<TPF; wiki>
 X<websites; TPF wiki>
 
-The Perl Foundation (U<http://www.perlfoundation.org/>) hosts a wiki for all
-things Perl 5. See U<http://www.perlfoundation.org/perl5>.
+The Perl Foundation (U<http://www.perlfoundation.org/>) съдържа WIKI страници за всичко
+относно Perl 5. Можете да го прегледате на U<http://www.perlfoundation.org/perl5>.
 
 X<Github>
 X<gitpan>
 X<websites; gitpan>
 
-Many Perl hackers use Github (U<http://github.com/>) to host their
-projectsN<...  including the sources of this book at
-U<http://github.com/chromatic/modern_perl_book/>>. See especially Gitpan
-(U<http://github.com/gitpan/>), which hosts Git repositories chronicling the
-complete history of every distribution on the CPAN.
+По-голямата част от хакерите на Perl използват Github (U<http://github.com/>) като място 
+за своите проекти N<...  включително и за текста на тази книга
+U<http://github.com/chromatic/modern_perl_book/>>. Специално внимание заслужава Gitpan
+(U<http://github.com/gitpan/>), където се намират Git сборници с пълната исторя, в 
+хронологичен ред, на всяка от дистрибуциите в CPAN.
 
-=begin tip A Local Git Mirror
+=begin tip Резервно копие на Git 
 
 X<CPAN; C<Git::CPAN::Patch>>
 X<Champoux, Yanick>
 
-GitPAN receives infrequent updates. As an alternative, consider using Yanick
-Champoux's wonderful C<Git::CPAN::Patch> module.
+GitPAN не бива често осъвременяван. Като алтернативен източник, бихте могли да използвате
+великолепният модул написан от Yanick Champoux C<Git::CPAN::Patch> module.
 
 =end tip
 
-=head1 Events
+=head1 Събития
 
 X<YAPC>
 
-The Perl community holds countless conferences, workshops, seminars, and
-meetings. In particular, the community-run YAPC--Yet Another Perl
-Conference--is a successful, local, low-cost conference model held on multiple
-continents. See U<http://yapc.org/>.
+Общността на Perl организира безброй конференции, работни групи, семинари и срещи.
+По-конкретно, инициираната от общността YAPC--Yet Another Perl
+Conference(Поредната Perl конференция)-- представлява доста успешен, организиран по места,
+и без големи разходи, модел за конференции който се организира навсякъде по света.
+Можете да се информирате допълнително на U<http://yapc.org/>.
 
-The Perl Foundation wiki lists other events at
+WIKI-то пък на (Фондацията на Perl) The Perl Foundation обявява различни събития на
 U<http://www.perlfoundation.org/perl5/index.cgi?perl_events>.
 
 X<Perl Mongers>
 
-Hundreds of local Perl Mongers groups get together frequently for technical
-talks and social interaction. See U<http://www.pm.org/>.
+Стотици почитатели се събират по групи на местна основа (Perl Mongers groups)
+за да общуват и обсъждат технически и социални теми от взаимен интерес.
+Ако се заинтересувате може да прегледате U<http://www.pm.org/>.
 
 =head1 IRC
 
@@ -146,14 +148,14 @@ X<IRC; #catalyst>
 X<IRC; #perl-help>
 X<IRC; #perl>
 
-When Perl mongers can't meet in person, many collaborate and chat online
-through the textual chat system known as IRC. Many of the most popular and
-useful Perl projects have their own IRC channels, such as I<#moose> and
-I<#catalyst>.
+Ако пък почитателите не успяват да се срещнат лично, много от тях взаимодействат и 
+си приказват посредством текстовата система за разговори позната като IRC. 
+Повечето от най-популярните и полезни проекти на Perl си имат собствени 
+IRC канали, като например I<#moose> и I<#catalyst>.
 
-The main server for Perl community is U<irc://irc.perl.org/>. Notable channels
-include I<#perl-help>, for general assistance on Perl programming, and
-I<#perl-qa>, devoted to testing and other quality issues. Be aware that the
-channel I<#perl> is a general purpose channel for discussing whatever its
-participants want to discussN<... and, as such, it's not primarily a
-helpdesk.>.
+Основният чат сървър на Perl общността е U<irc://irc.perl.org/>. Достойни за отбелязване
+канали включват I<#perl-help>, за обща помощ при програмиране с Perl, и също така
+I<#perl-qa>, който е посветен на дискусии относно тестване и подсигуряване на 
+качествен контрол. Имайте предвид, че канал I<#perl> е с общо предназначение 
+и в него се разгарят дискусии за каквото може да си помислите. 
+N<... и, като такъв, не е ориентиран към оказване на помощ.>.
