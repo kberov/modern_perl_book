@@ -67,12 +67,13 @@ X<search.cpan.org>
 X<CPAN; C<CPAN.pm>>
 X<CPAN; C<CPANPLUS>>
 
-Modern Perl installations include two clients to connect to, search, download,
-build, test, and install CPAN distributions, CPAN.pm and CPANPLUS. For the most
-part, each of these clients is equivalent for basic installation. This book
-recommends the use of CPAN.pm solely due to its ubiquity. With a recent version
-(as of this writing, 1.9800 is the latest stable release), module installation
-is reasonably easy. Start the client with:
+Съвременните инсталации на Perl включват два клиента които позволяват да се свържете, търсите, сваляте, изграждате, 
+тествате, и инсталирате CPAN дистрибуции, CPAN.pm и CPANPLUS. В общи линии, тези два клиента вършат едно и също
+когато става въпрос за основната инсталция. Препоръчван от тази книга е подходът използващ CPAN.pm
+заради своята достъпност. С най-новата версия (при писането на тази книга последната стабилна версия е 1.9800), 
+инсталирането на модули е доста лесно.
+
+Стартирането на клиент става с:
 
 =begin screen
 
@@ -80,7 +81,7 @@ is reasonably easy. Start the client with:
 
 =end screen
 
-To install a distribution within the client:
+За да инсталирате дадена дистрибуция, след като сте стартирали клиента:
 
 =begin screen
 
@@ -89,7 +90,7 @@ To install a distribution within the client:
 
 =end screen
 
-... or to install directly from the command line:
+... същото можете да постигнете от команден ред с:
 
 =begin screen
 
@@ -99,31 +100,34 @@ To install a distribution within the client:
 
 X<CPAN; C<CPAN.pm>>
 
-Eric Wilhelm's tutorial on configuring
-CPAN.pmN<U<http://learnperl.scratchcomputing.com/tutorials/configuration/>>
-includes a great troubleshooting section.
+Наръчникът за конфигуриране на CPAN.pm, написан от Ерик Вилхелм (Eric Wilhelm)
+N<U<http://learnperl.scratchcomputing.com/tutorials/configuration/>>
+осигурява много добра част описваща отстраняване на конфигурационни проблеми.
 
 =begin sidebar
 
-Even though the CPAN client is a core module for the Perl 5 distribution, you
-will likely need to install standard development tools such as a C<make>
-utility and possibly a C compiler. Windows users, see Strawberry Perl
-(U<http://strawberryperl.com/>) and Strawberry Perl Professional. Mac OS X
-users must install XCode. Unix and Unix-like users often have these tools
-available (though Debian and Ubuntu users should install C<build-essential>).
+Въпреки че CPAN клиентът е част от модула с ядрото на Perl 5 дистрибуцията, възможно е да ви се наложи
+да си инсталирате стандартни програми за разработка, като например инструментът C<make>
+, както и компилатор на C. За потребителите на Windows, се препоръчва да се запознаят с
+(U<http://strawberryperl.com/>) и Strawberry Perl Professional. Тези които ползват Mac OS X
+трябва да инсталират XCode. Ако пък ползвате Unix или Unix-производни операционни системи
+най-вероятно вече имате всичко необходимо (е, има и изкючения - потребителите на Debian и Ubuntu,
+например трябва да си инсталират C<build-essential>).
 
 =end sidebar
 
-=head2 CPAN Management Tools
+=head2 Инсрументи за управление на CPAN
 
-If your operating system provides its own installation of Perl 5, that version
-may be out of date or it may have its own dependencies on specific versions of
-CPAN distributions. Serious Perl developers often construct virtual walls
-between the system Perl and their development Perl installations. Several
-projects help to make this possible.
+При положение че операционната система която използвате разполага с инсталиран Perl 5,
+версията му би могла да е стара или пък да има зависимост от конкретна версия 
+на дистрибуции от CPAN. Истинските Perl разработчици често изграждат виртуална
+стена разделяща версията на Perl използвана от операционната система и версията с която
+разработват Perl програми. Има няколко различни проекта, 
+които правят това възможно.
 
-C<App::cpanminus> is a relatively new CPAN client with goals of speed,
-simplicity, and zero configuration. Install it with C<cpan App::cpanminus>, or:
+C<App::cpanminus> е сравнително скоро разработен клиент за CPAN, чиито основни цели са
+бързина, простота и конфигуриране сведено до минимум. 
+Можете да го инсталирате с C<cpan App::cpanminus>, или:
 
 =begin screen
 
@@ -132,9 +136,9 @@ simplicity, and zero configuration. Install it with C<cpan App::cpanminus>, or:
 
 =end screen
 
-C<App::perlbrew> is a system to manage and to switch between your own
-installations of multiple versions and configurations of Perl. Installation is
-as easy as:
+C<App::perlbrew> е разработка позволяваща ви да превключвате между различни версии и 
+конфигурации на Perl среда. 
+Инсталацията - просто изпълнете следните команди :
 
 =begin screen
 
@@ -148,14 +152,17 @@ as easy as:
 X<CPAN; local::lib>
 X<CPAN; App::local::lib::helper>
 
-The C<local::lib> CPAN distribution allows you to install and to manage
-distributions in your own user directory, rather than for the system as a
-whole. This is an effective way to maintain CPAN distributions without
-affecting other users. Installation is somewhat more involved than the previous
-two distributions, though C<App::local::lib::helper> can simplify the process.  See
-U<http://search.cpan.org/perldoc?local::lib> and
-U<http://search.cpan.org/perldoc?App::local::lib::helper> for more details.
+Дистрибуцията C<local::lib> на CPAN позволява да инсталирате и управлявате
+различни дистрибуции в собствената ви потребителска директория, вместо да 
+дефинирате различни версии за цялата система.
+Това предлага полезен начин за употреба на CPAN дистрибуции, като работната
+среда на другите потребители не е повлияна ни най-малко.
+Инсталацията обаче е малко по-сложна от тази на двете описани по горе.
+Ако използвате C<App::local::lib::helper> процеса на инсталация се опростява значително.
+За допълнителна информация прегледайте
+U<http://search.cpan.org/perldoc?local::lib> и
+U<http://search.cpan.org/perldoc?App::local::lib::helper>.
 
-All three projects tend to assume a Unix-like environment (such
-as a GNU/Linux distribution or even Mac OS X). Windows users, see the Padre
-all-in-one download (U<http://padre.perlide.org/download.html>).
+И при трите проекта се предполага че работите с Unix-производна среда (като 
+някоя GNU/Linux или пък Mac OS X). За потребители на Windows, се препоръчва цялостното
+решение Padre (U<http://padre.perlide.org/download.html>).
