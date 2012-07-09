@@ -73,7 +73,7 @@ X<<< C<< E<lt>=E<gt> >>; оператор за числово сравнение
 аргументи. Това са оператора за числово равенство (C<==>); за числово
 неравенство (C<!=>); по-голямо (C<< E<gt> >>); по-малко (C<< E<lt>
 >>); по-голямо или равно (C<< E<gt>= >>); по-малко или равно (C<<
-E<lt>= >>); и сортиращият оператор за сравнение (C<< E<lt>=E<gt>
+E<lt>= >>); и  сортиращият оператор за сравнение (C<< E<lt>=E<gt>
 >>()).
 
 =head2 Оператори за работа с низове
@@ -87,71 +87,71 @@ X<C<!~>; низов оператор>
 X<оператори; C<.>>
 X<C<.>; низов оператор>
 
-Операторите за низове налагат нивоз контекст върху своите
+Операторите за низове налагат низов контекст върху своите
 аргументи. Операторите за положително и отрицателно търсене в низ,
 чрез регулярен израз, (C<=~> и C<!~>), както и оператора за конкатация
 (C<.>) работят с низове.
 
-X<operators; C<eq>>
-X<operators; C<ne>>
-X<operators; C<gt>>
-X<operators; C<lt>>
-X<operators; C<ge>>
-X<operators; C<le>>
-X<operators; C<cmp>>
-X<C<eq>; string comparison operator>
-X<C<ne>; string comparison operator>
-X<C<gt>; string comparison operator>
-X<C<lt>; string comparison operator>
-X<C<ge>; string comparison operator>
-X<C<le>; string comparison operator>
-X<C<cmp>; string comparison operator>
+X<оператори; C<eq>>
+X<оператори; C<ne>>
+X<оператори; C<gt>>
+X<оператори; C<lt>>
+X<оператори; C<ge>>
+X<оператори; C<le>>
+X<оператори; C<cmp>>
+X<C<eq>; оператор за сравняване на низове>
+X<C<ne>; оператор за сравняване на низове>
+X<C<gt>; оператор за сравняване на низове>
+X<C<lt>; оператор за сравняване на низове>
+X<C<ge>; оператор за сравняване на низове>
+X<C<le>; оператор за сравняване на низове>
+X<C<cmp>; оператор за сравняване на низове>
 
-Several comparison operators impose string contexts upon their operands. These
-are string equality (C<eq>), string inequality (C<ne>), greater than (C<gt>),
-less than (C<lt>), greater than or equal to (C<ge>), less than or equal to
-(C<le>), and the string sort comparison operator (C<cmp>).
+Оператори за сравнение на низове налагат низов контекст върху своите
+аргументи. Това са операторизе за равенство между низове (C<eq>);
+неравенство между низове (C<ne>); по-голямо (C<gt>); по-малко (C<lt>);
+по-голямо или равно (C<ge>); по-малко или равно (C<le>); и сортиращият
+низов оператор за сравнение (C<cmp>).
 
-=head2 Logical Operators
+=head2 Логически оператори
 
-X<operators; logical>
-X<operators; C<&&>>
-X<operators; C<and>>
-X<operators; C<||>>
-X<operators; C<or>>
-X<operators; C<//>>
-X<operators; C<?:>>
-X<operators; C<!>>
-X<operators; C<not>>
-X<operators; C<xor>>
-X<C<&&>; logical operator>
-X<C<and>; logical operator>
-X<C<||>; logical operator>
-X<C<or>; logical operator>
-X<C<//>; logical operator>
-X<C<?:>; logical operator>
-X<C<!>; logical operator>
-X<C<not>; logical operator>
-X<C<xor>; logical operator>
-X<operators; defined-or>
-X<defined-or; logical operator>
-X<short-circuiting>
+X<оператори; логически>
+X<оператори; C<&&>>
+X<оператори; C<and>>
+X<оператори; C<||>>
+X<оператори; C<or>>
+X<оператори; C<//>>
+X<оператори; C<?:>>
+X<оператори; C<!>>
+X<оператори; C<not>>
+X<оператори; C<xor>>
+X<C<&&>; логически оператор>
+X<C<and>; логически оператор>
+X<C<||>; логически оператор>
+X<C<or>; логически оператор>
+X<C<//>; логически оператор>
+X<C<?:>; логически оператор>
+X<C<!>; логически оператор>
+X<C<not>; логически оператор>
+X<C<xor>; логически оператор>
+X<оператори; defined-or>
+X<defined-or; логически оператор>
+X<short-circuiting; ранно прекъсване>
 
-Logical operators impose a boolean context on their operands. These operators
-are C<&&>, C<and>, C<||>, and C<or>. All are infix and all exhibit
-I<short-circuiting> behavior (L<short_circuiting>). The word variants have
-lower precedence than their punctuation forms.
+Логическите оператори налагат булев контекст върху своите
+аргументи. Логически оператори са C<&&>, C<and>, C<||>, и
+C<or>. Всичките се използват в infix позиция и също така всичките
+I<прекъсват възможно най-ранно> (L<short_circuiting>). Операторите
+думи имат по-нисък приоритет от другата им форма, която се пише чрез
+пунктуационни знаци.
 
-The defined-or operator, C<//>, tests the I<definedness> of its operand. Unlike
-C<||> which tests the I<truth> of its operand, C<//> evaluates to a true value
-even if its operand evaluates to a numeric zero or the empty string. This is
-especially useful for setting default parameter values:
+Операторът defined-or, C<//>, тества дали аргумента му е I<дефиниран>. Съвсем различно от операторът C<||>, който тества I<истинностната> стойност на аргументите си, операторът C<//> връща истинностна стойност истина дори когато аргумента му има числова стойност нула или е празен низ. Това е лесен метод за писане на забавен код, който задава стойност по подразбиране на променливи:
 
 =begin programlisting
 
     sub name_pet
     {
-        my $name = shift // 'Fluffy';
+        my $name = shift // 'Шаро';
         ...
     }
 
