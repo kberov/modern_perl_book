@@ -180,50 +180,54 @@ C<!>.
 
 =head2 Побитови оператори
 
-X<operators; bitwise>
-X<<< operators; C<< E<lt>E<lt> >> >>>
-X<<< operators; C<< E<gt>E<gt> >> >>>
-X<operators; C<&>>
-X<operators; C<|>>
-X<operators; C<^>>
-X<operators; C<&=>>
-X<operators; C<|=>>
-X<operators; C<^=>>
-X<<< operators; C<< E<lt>E<lt>= >> >>>
-X<<< operators; C<< E<gt>E<gt>= >> >>>
+X<оператори; побитово>
+X<<< оператори; C<< E<lt>E<lt> >> >>>
+X<<< оператори; C<< E<gt>E<gt> >> >>>
+X<оператори; C<&>>
+X<оператори; C<|>>
+X<оператори; C<^>>
+X<оператори; C<&=>>
+X<оператори; C<|=>>
+X<оператори; C<^=>>
+X<<< оператори; C<< E<lt>E<lt>= >> >>>
+X<<< оператори; C<< E<gt>E<gt>= >> >>>
 
-X<<< C<< E<lt>E<lt> >>; bitwise operator >>>
-X<<< C<< E<gt>E<gt> >>; bitwise operator >>>
+X<<< C<< E<lt>E<lt> >>; побитови оператори >>>
+X<<< C<< E<gt>E<gt> >>; побитови оператори >>>
 
-X<C<&>; bitwise operator>
-X<C<|>; bitwise operator>
-X<C<^>; bitwise operator>
-X<C<&=>; bitwise operator>
-X<C<|=>; bitwise operator>
-X<C<^=>; bitwise operator>
-X<<< C<< E<lt>E<lt>= >>; bitwise operator >>>
-X<<< C<< E<gt>E<gt>= >>; bitwise operator >>>
+X<C<&>; побитови оператори>
+X<C<|>; побитови оператори>
+X<C<^>; побитови оператори>
+X<C<&=>; побитови оператори>
+X<C<|=>; побитови оператори>
+X<C<^=>; побитови оператори>
+X<<< C<< E<lt>E<lt>= >>; побитови оператори >>>
+X<<< C<< E<gt>E<gt>= >>; побитови оператори >>>
 
-Bitwise operators treat their operands numerically at the bit level. These
-operations are uncommon. They consist of left shift (C<< << >>), right shift
-(C<< >> >>), bitwise and (C<&>), bitwise or (C<|>), and bitwise xor (C<^>), as
-well as their in-place variants (C<< <<= >>, C<< >>= >>, C<&=>, C<|=>, and
-C<^=>).
+Побитовите оператори работят върху нулите и единиците, с които
+вътрешно са представени техните аргументи. Тяхното използване не се
+среща често. Побитови оператори са операторът за изместване наляво
+(C<< << >>); операторът за изместване надясно (C<< >> >>); побитово
+„и“ (C<&>); побитово „или“ (C<|>); и побитово изключващо „или“
+(C<^>). Вариантите, които работят директно върху променливата, са C<<
+<<= >>, C<< >>= >>, C<&=>, C<|=>, и C<^=>.
 
-=head2 Special Operators
+=head2 Специални оператори
 
 Z<auto_increment_operator>
 
-X<operators; auto-increment>
-X<auto-increment>
-X<operators; C<++>>
-X<C<++>; auto-increment operator>
+X<оператори; автоматично увеличаване>
+X<автоматично увеличаване>
+X<оператори; C<++>>
+X<C<++>; оператор за автоматично увеличаване>
 
-The auto-increment operator has special behavior. When used on a value with a
-numeric component (L<cached_coercions>), the operator increments that numeric
-component. If the value is obviously a string (and has no numeric component),
-the operator increments that string value such that C<a> becomes C<b>, C<zz>
-becomes C<aaa>, and C<a9> becomes C<b0>.
+Операторът за автоматично увеличаване има особено поведение. Когато се
+използва върху стойност с числов компонент(има нещо, което прилича на
+число в началото на низа, ако стойността е низ) (L<cached_coercions>),
+операторът ще третира стойността като число и ще увеличи това число с
+1. Ако стойността не е число, а низ без числов компонент в началото,
+то операторът увеличава стойността на низа, така че C<a> става C<b>,
+C<zz> става C<aaa>, а C<a9> става C<b0>.
 
 =begin programlisting
 
@@ -232,21 +236,21 @@ becomes C<aaa>, and C<a9> becomes C<b0>.
 
     $num++;
     $str++;
-    is( $num,   2, 'numeric autoincrement' );
-    is( $str, 'b', 'string autoincrement'  );
+    is( $num,   2, 'числово увеличаване' );
+    is( $str, 'b', 'низово увеличаване'  );
 
     no warnings 'numeric';
     $num += $str;
     $str++;
 
-    is( $num, 2, 'numeric addition with $str'    );
-    is( $str, 1, '... gives $str a numeric part' );
+    is( $num, 2, 'числово събиране с $str'    );
+    is( $str, 1, '... интерпретира $str като число' );
 
 =end programlisting
 
-X<operators; repetition>
-X<operators; C<x>>
-X<C<x>; repetition operator>
+X<оператори; повторение>
+X<оператори; C<x>>
+X<C<x>; оператор за повторение>
 
 The repetition operator (C<x>) is an infix operator with complex behavior. In
 list context, when given a list, it evaluates to that list repeated the number
