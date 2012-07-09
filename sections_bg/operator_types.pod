@@ -157,23 +157,26 @@ I<прекъсват възможно най-ранно> (L<short_circuiting>). 
 
 =end programlisting
 
-X<C<?:>; ternary conditional operator>
+X<C<?:>; условен оператор>
 
-The ternary conditional operator (C<?:>) takes three operands. It evaluates the
-first in boolean context and evaluates to the second if the first is true and
-the third otherwise:
+Условния оператор (C<?:>) работи с три аргумента. Първият от
+аргументите се изпълнява в булев контекст и ако той е истина, връща
+резултата от втория аргумент, иначе връща резултата от третия
+аргумент:
 
 =begin programlisting
 
-    my $truthiness = $value ? 'true' : 'false';
+    my $truthiness = $value ? 'истина' : 'неистина';
 
 =end programlisting
 
-The prefix C<!> and C<not> operators return the logical opposite of the boolean
-value of their operands. C<not> is a lower precedence version of C<!>.
+Префиксните оператори C<!> и C<not> връщат истина, ако аргумента им
+има булева стойност неистина и връщат неистина, ако аргумента им има
+булева стойност истина. Операторът C<not> е с по-нисък приоритет от
+C<!>.
 
-The C<xor> operator is an infix operator which evaluates to the exclusive-or of
-its operands.
+Операторът C<xor> е инфикс оператор, който връща стойност от
+изключващото или на аргументите си.
 
 =head2 Bitwise Operators
 
