@@ -52,6 +52,10 @@ or phrases upon which somebody suggested and others silently agreed to follow or
 
 гола дума; дума, която не е оградена в кавички
 
+=item  x
+
+translation with or without description
+
 =item y
 
 And so on. Add your own items below. This file can be easily searched using "grep" or using "Find" functionality in a browser.
