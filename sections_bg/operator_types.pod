@@ -252,40 +252,42 @@ X<оператори; повторение>
 X<оператори; C<x>>
 X<C<x>; оператор за повторение>
 
-The repetition operator (C<x>) is an infix operator with complex behavior. In
-list context, when given a list, it evaluates to that list repeated the number
-of times specified by its second operand. In list context when given a scalar,
-it produces a string consisting of the string value of its first operand
-concatenated to itself the number of times specified by its second operand.
+Операторът за повторение (C<x>) е инфикс оператор със сложно
+поведение. В списъчен контекст, когато му се подаде списък, операторът
+ще повтори списъка толкова пъти, колкото е указано чрез втория
+аргумент. В списъчен контекст, когато му се подаде скаларна стойност,
+оператора връща низ съдържащ първия аргумент съединен толкова пъти със
+себе си, колкото е посочено от втория аргумент.
 
-In scalar context, the operator always produces a concatenated string repeated
-appropriately. For example:
+В скаларен контекст, операторът винаги връща низ от повторенията на
+първия аргумент. Например:
 
 =begin programlisting
 
-    my @scheherazade = ('nights') x 1001;
-    my $calendar     =  'nights'  x 1001;
+    my @scheherazade = ('нощи') x 1001;
+    my $calendar     =  'нощи'  x 1001;
     my $cal_length   =  length $calendar;
 
-    is( @scheherazade, 1001, 'list repeated' );
-    is( $cal_length,   1001 * length 'nights',
-                       'word repeated' );
+    is( @scheherazade, 1001, 'повторен списък' );
+    is( $cal_length,   1001 * length 'нощи',
+                       'повторена дума' );
 
-    my @schenolist   =  'nights'  x 1001;
-    my $calscalar    = ('nights') x 1001;
+    my @schenolist   =  'нощи'  x 1001;
+    my $calscalar    = ('нощи') x 1001;
 
-    is( @schenolist, 1, 'no lvalue list' );
+    is( @schenolist, 1, 'имаме повторена дума' );
     is( length $calscalar,
-        1001 * length 'nights', 'word still repeated' );
+        1001 * length 'nights', 'пак имаме повторена дума' );
 
 =end programlisting
 
-X<operators; range>
-X<range>
-X<operators; C<..>>
-X<C<..>; range operator>
+X<оператори; обхват>
+X<обхват>
+X<оператори; C<..>>
+X<C<..>; оператор за обхват>
 
-The infix I<range> operator (C<..>) produces a list of items in list context:
+Инфикс операторът за I<обхват> (C<..>) връща списък в списъчен
+контекст:
 
 =begin programlisting
 
@@ -293,38 +295,39 @@ The infix I<range> operator (C<..>) produces a list of items in list context:
 
 =end programlisting
 
-It can produce simple, incrementing ranges (both as integers or strings), but
-it cannot intuit patterns or more complex ranges.
+Той може да връща само списък от последователни стойности, като всяка е по-голяма от предходната.
 
-X<operators; flip-flop>
-X<flip-flop>
-X<C<..>; flip-flop operator>
+X<operators; тригер>
+X<тригер>
+X<C<..>; тригер оператор>
 
-In boolean context, the range operator becomes the I<flip-flop> operator. This
-operator produces a false value until its left operand is true. That value
-stays true until the right operand is true, after which the value is false
-again until the left operand is true again. Imagine parsing the text of a
-formal letter with:
+В булев контекст, операторът за обхват се превръща в I<тригер>
+оператор. Този оператор връща неистина, докато левият му аргумент не
+стане истинен. Тогава оператора връща истина докато и десният аргумент
+е истинен, след което стойността връщана от оператора е пак неистина
+докато левият аргумент не стане отново истинен. Представете си
+програма, която чете формално писмо:
 
 =begin programlisting
 
-    while (/Hello, $user/ .. /Sincerely,/)
+    while (/Здравей, $user/ .. /Искрено,/)
     {
         say "> $_";
     }
 
 =end programlisting
 
-X<operators; comma>
-X<operators; C<,>>
-X<C<,>; operator>
-X<<< operators; C<< =E<gt> >> >>>
-X<<< C<< =E<gt> >>; fat comma operator >>>
+X<оператори; запетайка>
+X<оператори; C<,>>
+X<C<,>; оператор>
+X<<< оператори; C<< =E<gt> >> >>>
+X<<< C<< =E<gt> >>; оператор „дебелата запетайка“ >>>
 
-The I<comma> operator (C<,>) is an infix operator. In scalar context it
-evaluates its left operand then returns the value produced by evaluating its
-right operand. In list context, it evaluates both operands in left-to-right
-order.
+Операторът I<запетайка> (C<,>) е инфикс оператор. В скаларен контекст
+Perl изпълнява левият аргумент, а след това връща стойността от
+изпълнението на десния аргумент. В списъчен контекст, Perl изпълнява
+двата аргумента поред отляво-надясно.
 
-The fat comma operator (C<< => >>) also automatically quotes any bareword used
-as its left operand (L<hashes>).
+„Дебелата запетайка“ (C<< => >>) автоматично третира „голи думи“
+(такива, които не стоят в кавички), подадени като ляв аргумент, така
+все едно са били поставени в кавички (L<hashes>).
