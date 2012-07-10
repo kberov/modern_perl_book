@@ -52,7 +52,7 @@ or phrases upon which somebody suggested and others silently agreed to follow or
 
 гола дума; дума, която не е оградена в кавички
 
-=item  x
+=item x
 
 translation with or without description
 
