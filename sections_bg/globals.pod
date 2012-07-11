@@ -5,15 +5,13 @@ Z<globals>
 X<super globals>
 X<variables; super global>
 
-Perl 5 provides several I<super global variables> that are truly global, not
-scoped to a package or file. Unfortunately,
-their global availability means that any direct or indirect
-modifications may have effects on other parts of the program--and they're terse.
-Experienced Perl 5 programmers have memorized some of them. Few people
-have memorized all of them. Only a handful are ever useful. C<perldoc
-perlvar> contains the exhaustive list of such variables.
+Perl 5 има няколко I<супер глобални променливи> които са наистина глобални, не са само в областта на видимост на един пакет или файл.
+За нещастие, тяхната глобална достъпност означава също че всякакви преки и непреки промени могат да се отразят на други 
+части от програмата. Опитните програмисти на Perl 5 запомят някои от тези променливи. 
+Малко хора запомят всички супер глобални променливи. В същност само малка част от тези променливи влиза в употреба.
+C<perldoc perlvar> съдържа пълният списък с тези променливи.
 
-=head2 Managing Super Globals
+=head2 Употреба на супер глобалните променливи
 
 X<super globals; managing>
 X<builtins; C<local>>
